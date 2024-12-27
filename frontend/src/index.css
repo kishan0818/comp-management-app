@@ -3,28 +3,35 @@
 @tailwind utilities;
 
 @layer components {
-	/* Button */
-	.button {
-		@apply bg-blue-500 text-white border-none py-2 px-4 m-1 cursor-pointer rounded-md;
-	}
+  /* Button */
+  .button {
+    @apply bg-blue-500 text-white border-none py-2 px-4 m-1 cursor-pointer rounded-md transition duration-300 ease-in-out shadow-md;
+  }
 
-	.button:hover {
-		@apply bg-blue-700;
-	}
+  .button:hover {
+    @apply bg-blue-700 shadow-lg transform scale-105; /* Darker blue and scaling effect on hover */
+  }
 
-	/* Textarea, Input, and Select */
-	.input,
-	.textarea,
-	.select {
-		@apply w-full mb-2 p-2 border rounded-md border-gray-300;
-	}
+  /* Textarea, Input, and Select */
+  .input,
+  .textarea,
+  .select {
+    @apply w-full mb-2 p-2 border rounded-md border-gray-300 transition duration-300 ease-in-out focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
 
-	.textarea {
-		@apply min-h-[100px];
-	}
+  .textarea {
+    @apply min-h-[100px] resize-none; /* Prevent resizing for better layout */
+  }
 
-	/* File Input */
-	.input[type="file"] {
-		@apply w-full p-2 border rounded-md border-gray-300;
-	}
+  /* File Input */
+  .input[type="file"] {
+    @apply w-full p-2 border rounded-md border-gray-300 transition duration-300 ease-in-out focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+
+  /* Additional Styles for Inputs */
+  .input:focus,
+  .textarea:focus,
+  .select:focus {
+    @apply outline-none ring ring-blue-500; /* Add a ring effect on focus */
+  }
 }

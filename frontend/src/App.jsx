@@ -1,8 +1,8 @@
+import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ComplaintForm from "./components/ComplaintForm";
 import AdminView from "./components/AdminView";
 import StatusCheck from "./components/StatusCheck";
-import React from "react";
 
 const router = createBrowserRouter([
     {
