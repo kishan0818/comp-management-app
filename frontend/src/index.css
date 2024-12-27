@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	/* Button */
+	.button {
+		@apply bg-blue-500 text-white border-none py-2 px-4 m-1 cursor-pointer rounded-md;
+	}
+
+	.button:hover {
+		@apply bg-blue-700;
+	}
+
+	/* Textarea, Input, and Select */
+	.input,
+	.textarea,
+	.select {
+		@apply w-full mb-2 p-2 border rounded-md border-gray-300;
+	}
+
+	.textarea {
+		@apply min-h-[100px];
+	}
+
+	/* File Input */
+	.input[type="file"] {
+		@apply w-full p-2 border rounded-md border-gray-300;
+	}
+}
