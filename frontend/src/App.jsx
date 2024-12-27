@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ComplaintForm from "./components/ComplaintForm";
 import AdminView from "./components/AdminView";
 import StatusCheck from "./components/StatusCheck";
+import React from "react";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
         path: "/status-check",
         element: <StatusCheck />,
     },
+    {
+        path: "*",
+        element: <h1>No Page Found</h1>
+    }
 ]);
 
 function App() {
